@@ -1,4 +1,4 @@
-# Use an official Node.js image as the base image
+# Use official Node.js image as a base
 FROM node:18
 
 # Set the working directory in the container
@@ -13,11 +13,8 @@ RUN npm install
 # Copy the rest of the application files
 COPY . .
 
-# Expose the port your app runs on
+# Expose port 5000
 EXPOSE 5000
 
-# Start the server
+# Command to run the app
 CMD ["node", "server.js"]
-
-
-
